@@ -10,6 +10,12 @@ app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
+app.get('/hello', (req,res) => {
+  return res.status(200).send('Hello world')
+})
+
+//
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
